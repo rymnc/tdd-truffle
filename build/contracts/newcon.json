@@ -1,52 +1,33 @@
 {
   "contractName": "newcon",
-  "abi": [
-    {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "getAdmin",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.7+commit.b8d736ae\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"getAdmin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":\"newcon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":{\"keccak256\":\"0x92696e6688cebc0a7578bd02337885372309a8bca29de5ae9db4d93288f4272d\",\"urls\":[\"bzz-raw://4f24b44a2d5d3fb404791da0aa01f295d33728528b205d211d52a2d75315e0ce\",\"dweb:/ipfs/QmQBtANPGwR8AzofBPQo5E4dVZS8WThDRrDfcu8rKX9QbQ\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060d48061005f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80636e9960c314602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690509056fea26469706673582212201fef375537324db3ccaf74f0b231077e42931b36cfdb76a1a5f403c11b33a01d64736f6c63430006070033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80636e9960c314602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690509056fea26469706673582212201fef375537324db3ccaf74f0b231077e42931b36cfdb76a1a5f403c11b33a01d64736f6c63430006070033",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.7+commit.b8d736ae\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":\"newcon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":{\"keccak256\":\"0x66196943c471d826d75b0104eb3a08fec0e8010d88548d6843295f01fdfe9619\",\"urls\":[\"bzz-raw://9ea2e0dcd80812e30ff7a88628c727bf48bccf3ff774ab9e1ebaacfe6f824a0d\",\"dweb:/ipfs/QmP8PVeWcYoKRuqQASbNB7qSmKewkeVztgFdmQ8rmRKvk5\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e02aef86237f6308d75ff7793e037b822cef4e16fd738a99d35ed9f92cfb935764736f6c63430006070033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220e02aef86237f6308d75ff7793e037b822cef4e16fd738a99d35ed9f92cfb935764736f6c63430006070033",
   "immutableReferences": {},
-  "sourceMap": "26:198:1:-:0;;;78:56;5:9:-1;2:2;;;27:1;24;17:12;2:2;78:56:1;116:10;110:5;;:16;;;;;;;;;;;;;;;;;;26:198;;;;;;",
-  "deployedSourceMap": "26:198:1:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;26:198:1;;;;;;;;;;;;;;;;12:1:-1;9;2:12;142:79:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;182:7;208:5;;;;;;;;;;;201:12;;142:79;:::o",
-  "source": "pragma solidity 0.6.7;\r\n\r\ncontract newcon{\r\n    address private admin;\r\n\r\n    constructor() public {\r\n        admin=msg.sender;\r\n    }\r\n\r\n    function getAdmin() public view returns(address){\r\n        return admin;\r\n    }\r\n}",
+  "sourceMap": "26:25:0:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;26:25:0;;;;;;;",
+  "deployedSourceMap": "26:25:0:-:0;;;12:1:-1;9;2:12",
+  "source": "pragma solidity 0.6.7;\r\n\r\ncontract newcon{\r\n    \r\n}",
   "sourcePath": "C:\\Users\\aarya\\Documents\\GitHub\\tdd-truffle\\contracts\\newcon.sol",
   "ast": {
     "absolutePath": "/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol",
     "exportedSymbols": {
       "newcon": [
-        58
+        2
       ]
     },
-    "id": 59,
+    "id": 3,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 38,
+        "id": 1,
         "literals": [
           "solidity",
           "0.6",
           ".7"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:1"
+        "src": "0:22:0"
       },
       {
         "abstract": false,
@@ -55,248 +36,38 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 58,
+        "id": 2,
         "linearizedBaseContracts": [
-          58
+          2
         ],
         "name": "newcon",
         "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "constant": false,
-            "id": 40,
-            "mutability": "mutable",
-            "name": "admin",
-            "nodeType": "VariableDeclaration",
-            "overrides": null,
-            "scope": 58,
-            "src": "48:21:1",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
-            },
-            "typeName": {
-              "id": 39,
-              "name": "address",
-              "nodeType": "ElementaryTypeName",
-              "src": "48:7:1",
-              "stateMutability": "nonpayable",
-              "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
-              }
-            },
-            "value": null,
-            "visibility": "private"
-          },
-          {
-            "body": {
-              "id": 48,
-              "nodeType": "Block",
-              "src": "99:35:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 46,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 43,
-                      "name": "admin",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 40,
-                      "src": "110:5:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 44,
-                        "name": "msg",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": -15,
-                        "src": "116:3:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_magic_message",
-                          "typeString": "msg"
-                        }
-                      },
-                      "id": 45,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "116:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "src": "110:16:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "id": 47,
-                  "nodeType": "ExpressionStatement",
-                  "src": "110:16:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 49,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "overrides": null,
-            "parameters": {
-              "id": 41,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "89:2:1"
-            },
-            "returnParameters": {
-              "id": 42,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "99:0:1"
-            },
-            "scope": 58,
-            "src": "78:56:1",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 56,
-              "nodeType": "Block",
-              "src": "190:31:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 54,
-                    "name": "admin",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 40,
-                    "src": "208:5:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "functionReturnParameters": 53,
-                  "id": 55,
-                  "nodeType": "Return",
-                  "src": "201:12:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "functionSelector": "6e9960c3",
-            "id": 57,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getAdmin",
-            "nodeType": "FunctionDefinition",
-            "overrides": null,
-            "parameters": {
-              "id": 50,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "159:2:1"
-            },
-            "returnParameters": {
-              "id": 53,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 52,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "overrides": null,
-                  "scope": 57,
-                  "src": "182:7:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 51,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "182:7:1",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "181:9:1"
-            },
-            "scope": 58,
-            "src": "142:79:1",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "public"
-          }
-        ],
-        "scope": 59,
-        "src": "26:198:1"
+        "nodes": [],
+        "scope": 3,
+        "src": "26:25:0"
       }
     ],
-    "src": "0:224:1"
+    "src": "0:51:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol",
     "exportedSymbols": {
       "newcon": [
-        58
+        2
       ]
     },
-    "id": 59,
+    "id": 3,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 38,
+        "id": 1,
         "literals": [
           "solidity",
           "0.6",
           ".7"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:22:1"
+        "src": "0:22:0"
       },
       {
         "abstract": false,
@@ -305,228 +76,18 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 58,
+        "id": 2,
         "linearizedBaseContracts": [
-          58
+          2
         ],
         "name": "newcon",
         "nodeType": "ContractDefinition",
-        "nodes": [
-          {
-            "constant": false,
-            "id": 40,
-            "mutability": "mutable",
-            "name": "admin",
-            "nodeType": "VariableDeclaration",
-            "overrides": null,
-            "scope": 58,
-            "src": "48:21:1",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
-            },
-            "typeName": {
-              "id": 39,
-              "name": "address",
-              "nodeType": "ElementaryTypeName",
-              "src": "48:7:1",
-              "stateMutability": "nonpayable",
-              "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
-              }
-            },
-            "value": null,
-            "visibility": "private"
-          },
-          {
-            "body": {
-              "id": 48,
-              "nodeType": "Block",
-              "src": "99:35:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 46,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 43,
-                      "name": "admin",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 40,
-                      "src": "110:5:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 44,
-                        "name": "msg",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": -15,
-                        "src": "116:3:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_magic_message",
-                          "typeString": "msg"
-                        }
-                      },
-                      "id": 45,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "116:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "src": "110:16:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "id": 47,
-                  "nodeType": "ExpressionStatement",
-                  "src": "110:16:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 49,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "overrides": null,
-            "parameters": {
-              "id": 41,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "89:2:1"
-            },
-            "returnParameters": {
-              "id": 42,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "99:0:1"
-            },
-            "scope": 58,
-            "src": "78:56:1",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 56,
-              "nodeType": "Block",
-              "src": "190:31:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 54,
-                    "name": "admin",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 40,
-                    "src": "208:5:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "functionReturnParameters": 53,
-                  "id": 55,
-                  "nodeType": "Return",
-                  "src": "201:12:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "functionSelector": "6e9960c3",
-            "id": 57,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getAdmin",
-            "nodeType": "FunctionDefinition",
-            "overrides": null,
-            "parameters": {
-              "id": 50,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "159:2:1"
-            },
-            "returnParameters": {
-              "id": 53,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 52,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "overrides": null,
-                  "scope": 57,
-                  "src": "182:7:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 51,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "182:7:1",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "181:9:1"
-            },
-            "scope": 58,
-            "src": "142:79:1",
-            "stateMutability": "view",
-            "virtual": false,
-            "visibility": "public"
-          }
-        ],
-        "scope": 59,
-        "src": "26:198:1"
+        "nodes": [],
+        "scope": 3,
+        "src": "26:25:0"
       }
     ],
-    "src": "0:224:1"
+    "src": "0:51:0"
   },
   "compiler": {
     "name": "solc",
@@ -534,7 +95,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-06-25T15:32:43.298Z",
+  "updatedAt": "2020-06-25T15:52:19.506Z",
   "devdoc": {
     "methods": {}
   },
