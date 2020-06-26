@@ -1,10 +1,11 @@
 import React from 'react'
 import { useContext,useEffect } from 'react'
 import { Web3context } from '../context/web3-context'
+import Web3 from 'web3';
 
 const TestComp = () => {
-    const {data,setData} = useContext(Web3context);
-    console.log(data)
+    const {data,setData,w3,setW3} = useContext(Web3context);
+  //  console.log(data)
 
     window.ethereum.on('accountsChanged', function (accounts) {
         // Time to reload your interface with accounts[0]!
@@ -13,6 +14,9 @@ const TestComp = () => {
           
         }
         setData(details)
+        const web3_temp = new Web3(window.web3.currentProvider)
+        setW3(web3_temp)
+        console.log(w3)
       })
 
 
@@ -24,6 +28,9 @@ const TestComp = () => {
           
         }
         setData(details)
+        const web3_temp = new Web3(window.web3.currentProvider)
+        setW3(web3_temp)
+        console.log(w3)
     }
     return (
         <div className="container text-right mt-2 ">

@@ -5,11 +5,10 @@
   "repository": "https://github.com/aaryamannchallani/tdd-truffle",
   "author": "Aaryamann Challani <aaryamannchallani7@gmail.com>",
   "license": "MIT",
-
   "scripts": {
-    "setup":"truffle develop",
-    "test-deploy":"truffle test ./test/test.js",
-    "test-all":"truffle test"
-  }
-
+    "setup": "truffle develop",
+    "test-deploy": "truffle test ./test/test.js",
+    "test-all": "truffle test"
+  },
+  "dependencies": {}
 }
