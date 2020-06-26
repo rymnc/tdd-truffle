@@ -13,7 +13,7 @@
 2. `yarn test-all` (runs all tests, run in different terminal)
 3. `yarn test-deploy` (checks if contract can be deployed, run in different terminal)
 
-** Note that the contract name is newcon, and if additional contracts are to be deployed, include it in the 2_deploy_contracts.js file **
+<i> Note that the contract name is newcon, and if additional contracts are to be deployed, include it in the 2_deploy_contracts.js file </i>
 
 ## Frontend Setup:
 1. `cd app/`
