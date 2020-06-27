@@ -1,4 +1,5 @@
 ![Node.js CI](https://github.com/aaryamannchallani/tdd-truffle/workflows/Node.js%20CI/badge.svg?branch=master)
+![License](https://img.shields.io/github/license/aaryamannchallani/tdd-truffle)
 
 # tdd-truffle
 ### This Boilerplate code that I have made can be used by anyone looking to make quick dev iterations with frontend and backend(using Ethereum)
