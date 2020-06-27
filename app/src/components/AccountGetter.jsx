@@ -18,7 +18,7 @@ const TestComp = () => {
     try {
       const web3_temp = new Web3(window.web3.currentProvider);
       setW3(web3_temp);
-      console.log(w3);
+  //    console.log(w3);
       setIsConnected(true);
     } catch (error) {
       console.log(error);
