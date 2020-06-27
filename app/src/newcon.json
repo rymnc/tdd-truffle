@@ -1,0 +1,105 @@
+{
+  "contractName": "newcon",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.7+commit.b8d736ae\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":\"newcon\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol\":{\"keccak256\":\"0x66196943c471d826d75b0104eb3a08fec0e8010d88548d6843295f01fdfe9619\",\"urls\":[\"bzz-raw://9ea2e0dcd80812e30ff7a88628c727bf48bccf3ff774ab9e1ebaacfe6f824a0d\",\"dweb:/ipfs/QmP8PVeWcYoKRuqQASbNB7qSmKewkeVztgFdmQ8rmRKvk5\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e02aef86237f6308d75ff7793e037b822cef4e16fd738a99d35ed9f92cfb935764736f6c63430006070033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220e02aef86237f6308d75ff7793e037b822cef4e16fd738a99d35ed9f92cfb935764736f6c63430006070033",
+  "immutableReferences": {},
+  "sourceMap": "26:25:1:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;26:25:1;;;;;;;",
+  "deployedSourceMap": "26:25:1:-:0;;;12:1:-1;9;2:12",
+  "source": "pragma solidity 0.6.7;\r\n\r\ncontract newcon{\r\n    \r\n}",
+  "sourcePath": "C:\\Users\\aarya\\Documents\\GitHub\\tdd-truffle\\contracts\\newcon.sol",
+  "ast": {
+    "absolutePath": "/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol",
+    "exportedSymbols": {
+      "newcon": [
+        39
+      ]
+    },
+    "id": 40,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 39,
+        "linearizedBaseContracts": [
+          39
+        ],
+        "name": "newcon",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 40,
+        "src": "26:25:1"
+      }
+    ],
+    "src": "0:51:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/aarya/Documents/GitHub/tdd-truffle/contracts/newcon.sol",
+    "exportedSymbols": {
+      "newcon": [
+        39
+      ]
+    },
+    "id": 40,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 39,
+        "linearizedBaseContracts": [
+          39
+        ],
+        "name": "newcon",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 40,
+        "src": "26:25:1"
+      }
+    ],
+    "src": "0:51:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.7+commit.b8d736ae.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-27T05:46:36.203Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

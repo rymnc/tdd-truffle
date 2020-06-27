@@ -10,5 +10,8 @@
     "test-deploy": "truffle test ./test/test.js",
     "test-all": "truffle test"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "solidity-coverage": "^0.7.8"
+  }
 }
