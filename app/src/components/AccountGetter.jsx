@@ -9,23 +9,22 @@ const TestComp = () => {
   );
   //  console.log(data)
 
-  if(window.ethereum){
+  if (window.ethereum) {
     window.ethereum.on("accountsChanged", function (accounts) {
-    // Time to reload your interface with accounts[0]!
-    
-    setData({address:accounts[0]});
-    try {
-      const web3_temp = new Web3(window.web3.currentProvider);
-      setW3(web3_temp);
-  //    console.log(w3);
-      setIsConnected(true);
-    } catch (error) {
-      console.log(error);
-      setIsConnected(false);
-    }
-  });
+      // Time to reload your interface with accounts[0]!
+
+      setData({ address: accounts[0] });
+      try {
+        const web3_temp = new Web3(window.web3.currentProvider);
+        setW3(web3_temp);
+        //    console.log(w3);
+        setIsConnected(true);
+      } catch (error) {
+        console.log(error);
+        setIsConnected(false);
+      }
+    });
   }
-  
 
   const handleClick = async () => {
     if (isConnected) {
