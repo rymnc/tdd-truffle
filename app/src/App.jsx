@@ -7,9 +7,9 @@ import Wallet from "./components/Wallet";
 
 function getLibrary(provider) {
   const library = new Web3(provider);
-  const web3 = new Web3(provider);
+
   library.pollingInterval = 12000;
-  console.log(web3);
+
   return library;
 }
 
