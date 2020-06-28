@@ -1,18 +1,23 @@
 import React from "react";
-import { useContext } from "react";
-import { Web3contextprovider, Web3context } from "./context/web3-context";
-import AccountGetter from "./components/AccountGetter";
+import { Web3ReactProvider } from "@web3-react/core";
+import Web3 from "web3";
+
 import "./bootstrap.min.css";
-import AccountViewer from "./components/AccountViewer";
+import Wallet from "./components/Wallet";
+
+function getLibrary(provider) {
+  const library = new Web3(provider);
+  const web3 = new Web3(provider);
+  library.pollingInterval = 12000;
+  console.log(web3);
+  return library;
+}
 
 const App = () => {
   return (
-    <Web3contextprovider>
-      <div>
-        <AccountGetter />
-        <AccountViewer />
-      </div>
-    </Web3contextprovider>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Wallet />
+    </Web3ReactProvider>
   );
 };
 
