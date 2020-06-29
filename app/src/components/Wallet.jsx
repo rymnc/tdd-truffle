@@ -13,7 +13,7 @@ export const Wallet = () => {
 
   if (library) {
     library.eth
-      .getBalance(window.ethereum.selectedAddress)
+      .getBalance(account)
       .then(function (res) {
         setBalance(library.utils.fromWei(res, "ether"));
       });
