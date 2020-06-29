@@ -6,11 +6,13 @@
   "author": "Aaryamann Challani <aaryamannchallani7@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "setup": "truffle develop",
+    "setup": "ganache-cli -p 9545 -i 1337",
     "test-deploy": "truffle test ./test/test.js",
     "test-all": "truffle test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ganache-cli": "^6.10.0-beta.2"
+  },
   "devDependencies": {
     "solidity-coverage": "^0.7.8"
   }
