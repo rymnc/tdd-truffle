@@ -3,7 +3,7 @@ import { useWeb3React } from "@web3-react/core";
 import injectedConnector from "../connector/connectors";
 
 export const Wallet = () => {
-  const { chainId, account, activate, active, library } = useWeb3React();
+  const { chainId, account, activate, active, library,deactivate } = useWeb3React();
 
   const onClick = () => {
     activate(injectedConnector);
@@ -26,7 +26,16 @@ export const Wallet = () => {
       {active ? (
         <>
           {balance !== "" ? (
-            <p>{balance !== "" ? `Balance : ${balance} ether` : ""}</p>
+            
+            <p>{balance !== "" ? `Balance : ${balance} ether ` : ""}
+            <button
+          type="button"
+          className="btn btn-outline-danger"
+          onClick={()=>{deactivate(injectedConnector)}}
+        >
+          Disconnect
+        </button>
+            </p>
           ) : (
             <p>Loading...</p>
           )}
