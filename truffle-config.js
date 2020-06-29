@@ -24,6 +24,7 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -45,7 +46,7 @@ module.exports = {
     development: {
       host: "127.0.0.1", // Localhost (default: none)
       port: 9545, // Standard Ethereum port (default: none)
-      network_id: "*", // Any network (default: none)
+      network_id: "2384702340", // Any network (default: none)
     },
 
     // Another network with more advanced options...
