@@ -1,27 +1,23 @@
 import React, { useState } from "react";
-
-import Web3 from "web3";
 import { useWeb3React } from "@web3-react/core";
-
 import injectedConnector from "../connector/connectors";
+
 export const Wallet = () => {
-  const { chainId, account, activate, active } = useWeb3React();
+  const { chainId, account, activate, active, library } = useWeb3React();
 
   const onClick = () => {
     activate(injectedConnector);
-    // handleBalance()
   };
 
   const [balance, setBalance] = useState("");
 
-  const handleBalance = async () => {
-    const web3 = new Web3(window.ethereum);
-    const temp = web3.utils.fromWei(
-      await web3.eth.getBalance(account),
-      "ether"
-    );
-    setBalance(temp.slice(0, 6));
-  };
+  if (library) {
+    library.eth
+      .getBalance(window.ethereum.selectedAddress)
+      .then(function (res) {
+        setBalance(library.utils.fromWei(res, "ether"));
+      });
+  }
 
   return (
     <div className="container text-right">
@@ -32,9 +28,7 @@ export const Wallet = () => {
           {balance !== "" ? (
             <p>{balance !== "" ? `Balance : ${balance} ether` : ""}</p>
           ) : (
-            <button className="btn-primary btn " onClick={handleBalance}>
-              Get Balance
-            </button>
+            <p>Loading...</p>
           )}
         </>
       ) : (
