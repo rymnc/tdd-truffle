@@ -10,11 +10,15 @@
   <li>yarn</li>
   </ul>
   
+## Total Setup:
+1. `yarn total-setup` (Spins up the ganache instance, as well as serves the react-app on localhost:3000)
+
 
 ## Backend Setup:
-1. `yarn setup`
+1. `yarn setup` (Spins up the local ganache instance, port:9545, chainId:1337)
 2. `yarn test-all` (runs all tests, run in different terminal)
 3. `yarn test-deploy` (checks if contract can be deployed, run in different terminal)
+4. `yarn test-cov` (Runs Coverage tests)
 
 <i> Note that the contract name is newcon, and if additional contracts are to be deployed, include it in the 2_deploy_contracts.js file </i>
 
