@@ -10,6 +10,7 @@
     "test-deploy": "truffle test ./test/test.js",
     "test-all": "truffle test",
     "setup-frontend": "cd app && yarn start",
+    "get-dep":"yarn & (cd app && yarn)",
     "total-setup":"concurrently \"yarn setup\" \"yarn setup-frontend\"",
     "test-cov":"truffle run coverage"
   },
