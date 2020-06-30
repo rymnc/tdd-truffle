@@ -5,11 +5,14 @@
 ### This Boilerplate code that I have made can be used by anyone looking to make quick dev iterations with frontend and backend(using Ethereum)
 ## Requirements:
 <ul>
-  <li>node.js(12+)</li>
+  <li>node.js(10+)</li>
   <li>truffle</li>
   <li>yarn</li>
   </ul>
-  
+
+## First install the dependencies by
+`yarn get-dep`, then proceed as needed
+
 ## Total Setup:
 1. `yarn total-setup` (Spins up the ganache instance, as well as serves the react-app on localhost:3000)
 
