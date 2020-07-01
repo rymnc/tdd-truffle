@@ -6,7 +6,7 @@ export const Wallet = () => {
   const { chainId, account, activate, active, library,deactivate,error } = useWeb3React();
 
   const onClick = () => {
-    activate(injectedConnector);
+    activate(injectedConnector);   
   };
 
   if(error){
@@ -23,6 +23,10 @@ export const Wallet = () => {
       });
   }
 
+  const handleClick = async () =>{
+    setBalance( library.utils.fromWei(await library.eth.getBalance(account)))
+  }
+
   return (
     <div className="container text-right">
       <div>ChainId: {chainId}</div>
@@ -32,6 +36,16 @@ export const Wallet = () => {
           {balance !== "" ? (
             
             <p>{balance !== "" ? `Balance : ${balance} ether ` : ""}
+
+        <button
+          type="button"
+          className="btn btn-outline-success mx-2"
+          onClick={handleClick}
+        >
+          Refresh Balance
+          </button>
+
+
             <button
           type="button"
           className="btn btn-outline-danger"
