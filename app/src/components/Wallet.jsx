@@ -1,6 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { useWeb3React } from "@web3-react/core";
 import injectedConnector from "../connector/connectors";
+import useSWR from 'swr'
+
+const fetcher = (library) => (...args) => {
+  const [method, ...params] = args
+  console.log('in fetcher',method, params)
+  return library.eth[method](...params)
+}
+
+export const Balance = () => {
+  const { account, library } = useWeb3React()
+  const { data: balance } = useSWR(['getBalance', account, 'latest'], {
+    fetcher: fetcher(library),
+  })
+  if(!balance) {
+    return <div>...</div>
+  }
+  
+  return <div>{library.utils.fromWei(balance)} Ether</div>
+}
+
 
 export const Wallet = () => {
   const { chainId, account, activate, active, library,deactivate,error } = useWeb3React();
@@ -13,39 +33,14 @@ export const Wallet = () => {
     console.log(error.message)
   }
 
-  const [balance, setBalance] = useState("");
-
-  if (library) {
-    library.eth
-      .getBalance(account)
-      .then(function (res) {
-        setBalance(library.utils.fromWei(res, "ether"));
-      });
-  }
-
-  const handleClick = async () =>{
-    setBalance( library.utils.fromWei(await library.eth.getBalance(account)))
-  }
-
   return (
     <div className="container text-right">
       <div>ChainId: {chainId}</div>
       <div>Account: {account}</div>
       {active ? (
         <>
-          {balance !== "" ? (
-            
-            <p>{balance !== "" ? `Balance : ${balance} ether ` : ""}
 
-        <button
-          type="button"
-          className="btn btn-outline-success mx-2"
-          onClick={handleClick}
-        >
-          Refresh Balance
-          </button>
-
-
+        <Balance/>
             <button
           type="button"
           className="btn btn-outline-danger"
@@ -53,12 +48,11 @@ export const Wallet = () => {
         >
           Disconnect
         </button>
-            </p>
-          ) : (
-            <p>Loading...</p>
-          )}
-        </>
-      ) : (
+            </>
+          
+          )
+        
+       : (
         <button
           type="button"
           className="btn btn-outline-secondary"
