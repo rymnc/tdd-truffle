@@ -67,6 +67,32 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
+    
+    // Commonly used networks
+    /*
+    ganache: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: 5777 
+    },
+    ropsten: {
+      provider: new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${infuraKey}`),
+      network_id: 3, 
+      gas: 5500000, 
+      confirmations: 2, 
+      timeoutBlocks: 200, 
+      skipDryRun: true, 
+    },
+    rinkeby: {
+      provider: new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      network_id: 4, 
+      gas: 5500000, 
+      confirmations: 2, 
+      timeoutBlocks: 200, 
+      skipDryRun: true, 
+    }
+    */
+
   },
 
 
