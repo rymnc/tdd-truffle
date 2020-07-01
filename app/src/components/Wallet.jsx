@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import injectedConnector from "../connector/connectors";
 import useSWR from 'swr'
@@ -11,9 +11,25 @@ const fetcher = (library) => (...args) => {
 
 export const Balance = () => {
   const { account, library } = useWeb3React()
-  const { data: balance } = useSWR(['getBalance', account, 'latest'], {
+  const { data: balance,mutate } = useSWR(['getBalance', account, 'latest'], {
     fetcher: fetcher(library),
   })
+
+  useEffect(() => {
+    // listen for changes on an Ethereum address
+    console.log(`listening for blocks...`)    
+    library.eth
+		.subscribe("newBlockHeaders")
+		.on("data", async (error, event) => {     
+      mutate(undefined,true)
+		});
+    // remove listener when the component is unmounted
+    return () => {
+      library.removeAllListeners('block')
+    }
+    // trigger the effect only on component mount
+  }, [])
+
   if(!balance) {
     return <div>...</div>
   }
