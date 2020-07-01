@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import injectedConnector from "../connector/connectors";
 import useSWR from 'swr'
+import { utils } from 'ethers'
 
 const fetcher = (library) => (...args) => {
   const [method, ...params] = args
   console.log('in fetcher',method, params)
-  return library.eth[method](...params)
+  return library[method](...params)
 }
 
 export const Balance = () => {
@@ -18,14 +19,13 @@ export const Balance = () => {
   useEffect(() => {
     // listen for changes on an Ethereum address
     console.log(`listening for blocks...`)    
-    library.eth
-		.subscribe("newBlockHeaders")
-		.on("data", async (error, event) => {     
-      mutate(undefined,true)
-		});
+    library.on('block', () => {
+      console.log('update balance...')
+      mutate(undefined, true)
+    })
     // remove listener when the component is unmounted
     return () => {
-      library.eth.clearSubscriptions()
+      library.removeAllListeners()
     }
     // trigger the effect only on component mount
   }, [])
@@ -34,7 +34,7 @@ export const Balance = () => {
     return <div>...</div>
   }
   
-  return <div>{library.utils.fromWei(balance)} Ether</div>
+  return <div>{utils.formatEther(balance)} Ether</div>
 }
 
 
