@@ -25,7 +25,7 @@ export const Balance = () => {
 		});
     // remove listener when the component is unmounted
     return () => {
-      library.removeAllListeners('block')
+      library.eth.clearSubscriptions()
     }
     // trigger the effect only on component mount
   }, [])
