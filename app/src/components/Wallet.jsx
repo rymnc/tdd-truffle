@@ -19,7 +19,7 @@ export const Balance = () => {
   useEffect(() => {
     // listen for changes on an Ethereum address
     console.log(`listening for blocks...`)    
-    library.on('block', () => {
+    library.on('block',  () => {
       console.log('update balance...')
       mutate(undefined, true)
     })
