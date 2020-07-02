@@ -20,7 +20,7 @@ export const Balance = () => {
     console.log(`listening for blocks...`)    
     library.eth
 		.subscribe("newBlockHeaders")
-		.on("data", async (error, event) => {     
+		.on("data", async (error, event) => {   
       mutate(undefined,true)
 		});
     // remove listener when the component is unmounted

@@ -7,7 +7,7 @@ import Wallet from "./components/Wallet";
 
 function getLibrary(provider) {
   const library = new Web3(provider);
-  library.pollingInterval = 12000;
+  library.pollingInterval = 8000;
   console.log(library.givenProvider);
   return library;
 }
